@@ -2641,7 +2641,7 @@ let
         };
       };
 
-      jnoortheen.nix-ide = buildVscodeMarketplaceExtension {
+      jnoortheen.nix-ide = buildVscodeMarketplaceExtension (finalAttrs: {
         mktplcRef = {
           publisher = "jnoortheen";
           name = "nix-ide";
@@ -2649,14 +2649,14 @@ let
           hash = "sha256-0pMMnYFX+Ghs42Tvfcv9QqwhrEhCjIa7+6xJ51Fa0Dk=";
         };
         meta = {
-          changelog = "https://marketplace.visualstudio.com/items/jnoortheen.nix-ide/changelog";
+          changelog = "https://github.com/nix-community/vscode-nix-ide/blob/v${finalAttrs.version}/CHANGELOG.md";
           description = "Nix language support with formatting and error report";
           downloadPage = "https://marketplace.visualstudio.com/items?itemName=jnoortheen.nix-ide";
           homepage = "https://github.com/nix-community/vscode-nix-ide";
           license = lib.licenses.mit;
           maintainers = [ ];
         };
-      };
+      });
 
       jock.svg = buildVscodeMarketplaceExtension {
         mktplcRef = {
