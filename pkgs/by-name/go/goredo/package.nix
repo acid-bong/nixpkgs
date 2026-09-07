@@ -13,7 +13,7 @@ buildGoModule (finalAttrs: {
   version = "2.6.0";
 
   src = fetchurl {
-    url = "http://www.goredo.cypherpunks.ru/download/goredo-${finalAttrs.version}.tar.zst";
+    url = "http://www.goredo.stargrave.org/download/goredo-${finalAttrs.version}.tar.zst";
     hash = "sha256-XTL/otfCKC55TsUBBVors2kgFpOFh+6oekOOafOhcUs=";
   };
 
@@ -64,7 +64,7 @@ buildGoModule (finalAttrs: {
   meta = {
     outputsToInstall = [ "out" ];
     description = "Makefile replacement that sucks less";
-    homepage = "https://www.goredo.cypherpunks.ru";
+    homepage = "http://www.goredo.stargrave.org/";
     license = lib.licenses.gpl3;
     maintainers = [ lib.maintainers.spacefrogg ];
   };
