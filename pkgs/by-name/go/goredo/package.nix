@@ -65,7 +65,7 @@ buildGoModule (finalAttrs: {
     outputsToInstall = [ "out" ];
     description = "Makefile replacement that sucks less";
     homepage = "http://www.goredo.stargrave.org/";
-    license = lib.licenses.gpl3;
+    license = lib.licenses.gpl3Only;
     maintainers = [ lib.maintainers.spacefrogg ];
   };
 })
