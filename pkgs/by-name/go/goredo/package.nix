@@ -24,7 +24,7 @@ buildGoModule (finalAttrs: {
 
   nativeBuildInputs = [ zstd ];
 
-  nativeCheckInputs = lib.optionals finalAttrs.finalPackage.doCheck [
+  nativeCheckInputs =  [
     python3
     perl
   ];
