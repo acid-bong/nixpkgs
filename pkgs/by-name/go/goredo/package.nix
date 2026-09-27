@@ -36,6 +36,8 @@ buildGoModule (finalAttrs: {
   postPatch = ''
     substituteInPlace t/goredo-executable-rel.t \
       --replace-fail "#!/usr/bin/env perl" "#!${lib.getExe perl}"
+    substituteInPlace t/apenwarr/105-sympath/all.do \
+      --replace-fail "env pwd" "pwd"
   '';
 
   postBuild = ''
